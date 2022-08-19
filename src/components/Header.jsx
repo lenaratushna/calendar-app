@@ -12,7 +12,7 @@ function Header() {
 	const handleNextMonth = () => {
 		setMonthIndex(monthIndex + 1);
 	};
-	const handleReset = () => {
+	const handleToday = () => {
 		setMonthIndex(
 			monthIndex === dayjs().month()
 				? monthIndex + Math.random()
@@ -23,8 +23,8 @@ function Header() {
 	return (
 		<header className='py-3 flex items-center'>
 			<img src={logo} alt='calendar' className='mr-2 w-12 h-12' />
-			<h1 className='text-slate-400 text-xl font-bold mr-10'>My Calendar</h1>
-			<button className='border border-2 border-blue-500/50 text-blue-500/80 rounded py-2 px-4 mr-5'>
+			<h1 className=' text-xl text-slate-400 font-bold mr-10'>My Calendar</h1>
+			<button className='border border-2 border-blue-500/50 text-blue-500/80 rounded py-2 px-4 mr-5' onClick={handleToday}>
 				Today
 			</button>
 			<button onClick={handlePrevMonth}>
@@ -37,7 +37,7 @@ function Header() {
 					chevron_right
 				</span>
 			</button>
-			<h2 className='ml-4 text-xl text-teal-500 font-bold'>{dayjs(new Date(dayjs().year(), monthIndex)).format('MMMM YYYY')}</h2>
+			<h2 className='ml-4 text-xl text-slate-400 font-bold'>{dayjs(new Date(dayjs().year(), monthIndex)).format('MMMM YYYY')}</h2>
 		</header>
 	);
 }
