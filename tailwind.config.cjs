@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const labelsClasses = ['indigo', 'gray', 'green', 'blue', 'red', 'purple'];
+const labelsClasses = ['indigo', 'yellow', 'green', 'blue', 'red', 'pink'];
 
 module.exports = {
 	purge: {
